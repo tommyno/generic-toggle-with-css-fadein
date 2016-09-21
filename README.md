@@ -1,4 +1,4 @@
-# Generic toggle with css fadein
+# Generic toggle with css fade in
 Generic JS toggle, using CSS to fade in content.
 
 ## Demo
