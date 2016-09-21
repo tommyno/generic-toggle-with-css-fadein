@@ -1,0 +1,24 @@
+/* Toggle element */
+[data-toggle] {cursor: pointer;}
+
+/* Target element */
+[data-target] {display: none;}
+[data-target].is-visible {
+  animation: fadeIn .3s 0s 1 both linear;
+  display: block;
+}
+
+/* Keyframe animation enables opacity change combined with display:none to display:block */
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* Demo purpose */
+body {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  max-width: 400px;
+  margin: 20px;
+}
