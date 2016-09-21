@@ -6,7 +6,7 @@
     addListener(document.querySelectorAll('[data-toggle]'), 'click');
 
 
-    // Generic event listener - used for toggling
+    // Generic event listener
     /**
     * @name addListener
     * @desc Attaches event listeners to all matching elements - used for toggling
@@ -47,7 +47,7 @@
 
 
 
-    // Swap text - used on toggling
+    // Swap text
     /**
     * @name _swapText
     * @desc Adds original text as an data attr to element, then swaps between old and new text
