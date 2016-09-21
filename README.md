@@ -1,9 +1,10 @@
 # Generic toggle with css fadein
-
 Generic JS toggle, using CSS to fade in content.
 
-## How to use
+## Demo
+https://tommyno.github.io/generic-toggle-with-css-fadein
 
+## How to use
 Example:
 ```
 <a data-toggle="[data-target='content']" data-text-swap="Hide content">Show content</a>
