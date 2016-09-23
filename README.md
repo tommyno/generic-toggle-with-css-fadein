@@ -1,5 +1,5 @@
 # Generic toggle with css fade in
-Generic JS toggle, using CSS to fade in content.
+Generic JS toggle, with ARIA support, using CSS to fade in content.
 
 ## Demo
 https://tommyno.github.io/generic-toggle-with-css-fadein
@@ -13,4 +13,6 @@ Example:
 </div>
 ```
 
-Optional: Use `data-text-swap="New text"` to change text when toggled.
+Additional: 
+* Use `data-text-swap="New text"` to change text when toggled.
+* `aria-expanded` is automatically added and toggled on `data-target` element.
