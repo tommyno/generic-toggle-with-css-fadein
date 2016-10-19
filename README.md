@@ -14,6 +14,7 @@ Example:
 ```
 
 Additional: 
-* Use `data-text-swap="New text"` to change text when toggled. Example:
+* Use `data-text-swap="New text"` to change text when toggled. Example:<br>
 `<a data-toggle="[data-target='content']" data-text-swap="Hide content">Show content</a>`
+
 * No need to think about ARIA. `aria-expanded` is automatically added and toggled on `data-target` element.
