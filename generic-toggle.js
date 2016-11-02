@@ -2,10 +2,6 @@
 
     "use strict";
 
-     // Init
-    addListener(document.querySelectorAll('[data-toggle]'), 'click');
-
-
     // Generic event listener
     /**
     * @name addListener
@@ -90,7 +86,7 @@
     */
     function _updateARIAstatus(el) {
         var target = _getTargetAttr(el);
-        var isExpanded = (target.getAttribute('aria-expanded') == 'false') ? 'true' : 'false';
+        var isExpanded = (target.getAttribute('aria-expanded') === 'false') ? 'true' : 'false';
         target.setAttribute('aria-expanded', isExpanded);
     }
 
@@ -105,6 +101,12 @@
         var targetAttr = el.getAttribute('data-toggle');
         return document.querySelector(targetAttr);
     }
+
+
+
+    // Init
+   addListener(document.querySelectorAll('[data-toggle]'), 'click');
+
 
 
 })();
