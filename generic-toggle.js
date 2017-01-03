@@ -18,9 +18,9 @@
 
                 // Optional - auto set ARIA status if not set
                 var target = _getTargetAttr(selector[i]);
-                for (var i = 0; i < target.length; i++) {
-                    if (!target[i].getAttribute('aria-expanded')) {
-                        target[i].setAttribute('aria-expanded', 'false');
+                for (var j = 0; j < target.length; j++) {
+                    if (!target[j].getAttribute('aria-expanded')) {
+                        target[j].setAttribute('aria-expanded', 'false');
                     }
                 }                
 
