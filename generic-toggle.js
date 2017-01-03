@@ -18,9 +18,11 @@
 
                 // Optional - auto set ARIA status if not set
                 var target = _getTargetAttr(selector[i]);
-                if (!target.getAttribute('aria-expanded')) {
-                    target.setAttribute('aria-expanded', 'false');
-                }
+                for (var i = 0; i < target.length; i++) {
+                    if (!target[i].getAttribute('aria-expanded')) {
+                        target[i].setAttribute('aria-expanded', 'false');
+                    }
+                }                
 
             }
 
@@ -40,10 +42,14 @@
 
         var el = event.currentTarget;
 
-        // Toggle target
-        var target = _getTargetAttr(el);
-        target.classList.toggle('is-visible');
+        el.classList.toggle('is-expanded');
 
+        // Toggle target(s)
+        var target = _getTargetAttr(el); 
+        for (var i = 0; i < target.length; i++) {
+            target[i].classList.toggle('is-visible');
+        }
+        
         // Change text
         _swapText(el);
 
@@ -86,8 +92,10 @@
     */
     function _updateARIAstatus(el) {
         var target = _getTargetAttr(el);
-        var isExpanded = (target.getAttribute('aria-expanded') === 'false') ? 'true' : 'false';
-        target.setAttribute('aria-expanded', isExpanded);
+        for (var i = 0; i < target.length; i++) {
+            var isExpanded = (target[i].getAttribute('aria-expanded') === 'false') ? 'true' : 'false';
+            target[i].setAttribute('aria-expanded', isExpanded);
+        }
     }
 
 
@@ -99,7 +107,7 @@
     */
     function _getTargetAttr(el) {
         var targetAttr = el.getAttribute('data-toggle');
-        return document.querySelector(targetAttr);
+        return document.querySelectorAll(targetAttr);
     }
 
 
