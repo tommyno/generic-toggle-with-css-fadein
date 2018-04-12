@@ -72,7 +72,7 @@
 	// Update ARIA status
 	/**
 	 * @name _updateARIAstatus
-	 * @desc Adds original text as an data attr to element, then swaps between old and new text
+	 * @desc Updates ARIA status on toggle
 	 * @attr el (HTMLelement) - Element to update
 	 */
 	function _updateARIAstatus(el) {
